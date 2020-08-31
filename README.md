@@ -6,7 +6,7 @@ Sample using Transactions(via MSDTC) on Rest Calls to .Net Framework Service(Via
 Created based on this article:
 https://www.c-sharpcorner.com/article/distributed-transactions-with-webapi-across-application-domains/
 
-#Getting it to work
+# Getting it to work
 1. Create a Database with a table named LogTable with this structure:
 ```
 CREATE TABLE [dbo].[LogTable](
