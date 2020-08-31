@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Net Framework", ".Net Framework", "{8B4CA55E-434B-43DC-BAF6-F18ED7A2E746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoordinator", "DotNetCoordinator\DotNetCoordinator.csproj", "{921D80FB-DB93-40ED-8C19-3457E9ABFEF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFrwService", "NetFrwService\NetFrwService.csproj", "{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{921D80FB-DB93-40ED-8C19-3457E9ABFEF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{921D80FB-DB93-40ED-8C19-3457E9ABFEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{921D80FB-DB93-40ED-8C19-3457E9ABFEF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{921D80FB-DB93-40ED-8C19-3457E9ABFEF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{921D80FB-DB93-40ED-8C19-3457E9ABFEF2} = {8B4CA55E-434B-43DC-BAF6-F18ED7A2E746}
+		{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81} = {8B4CA55E-434B-43DC-BAF6-F18ED7A2E746}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {927A8521-18A6-44F1-941A-3226C373CE9F}
+	EndGlobalSection
+EndGlobal
