@@ -1,5 +1,9 @@
 Even that Transactions are not recommended on MicroServices(that usually is a sign that your services were mistakenly splitted), there are some situations(usually legacy calls) that demans some transaction control...
 
+![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/pcbl/MicroService.2PC.Transaction/master/SequenceDiagram.puml)
+
+*REMARK*: The .Net Code/.Net 5 service is not working, still... :-| More Infos: //https://github.com/dotnet/runtime/issues/715 
+
 # MicroService.2PC.Transaction
 Sample using Transactions(via MSDTC) on Rest Calls to .Net Framework Service(Via System.Transactions)
 
