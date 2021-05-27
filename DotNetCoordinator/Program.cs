@@ -23,18 +23,23 @@ namespace DotNetCoordinator
                             using (var client = new HttpClient())
                             {
                                 client.BaseAddress = new Uri(@"http://localhost:50714");
+                                //client.BaseAddress = new Uri(@"http://localhost:5000"); .Net core(not working... for now...)
+                                //https://github.com/dotnet/runtime/issues/715
                                 using (var request = new HttpRequestMessage(HttpMethod.Post, "work/dojob"))
                                 {
+                                    request.Content = new StringContent("\"client\"", System.Text.Encoding.UTF8,"application/json");
+                                    //Uncomment to simulate an error!
+                                    //request.Content = new StringContent("\"error\"", System.Text.Encoding.UTF8, "application/json");
                                     // forward transaction token  
-                                    request.AddTransactionPropagationToken();
-                                    Console.WriteLine($"{i}...");
+                                    var token = request.AddTransactionPropagationToken();
+                                    Console.WriteLine($"{token}::>>{i}...");
                                     var response = client.SendAsync(request).Result;
                                     response.EnsureSuccessStatusCode();
                                     Console.WriteLine($"{i}:OK!");
                                 }
                             }
-                            Console.WriteLine($"10 sec delay...");
-                            System.Threading.Thread.Sleep(10000);
+                            Console.WriteLine($"5 sec delay...");
+                            System.Threading.Thread.Sleep(5000);
                         }
                     }
                     catch (Exception ex)
@@ -44,10 +49,11 @@ namespace DotNetCoordinator
                     }
                     if (commit)
                     {
-                        Console.WriteLine("Commiting!");
-
+                        Console.WriteLine("Press Enter to Commit! (You might use the transaciton IT to make request from another client such as postman)");
+                        Console.ReadLine();
                         // Commit local and cross domain operations  
                         scope.Complete();
+                        Console.WriteLine("C O M M I T E D");
                     }
                     else
                     {

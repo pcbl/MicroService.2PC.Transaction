@@ -6,13 +6,16 @@ namespace DotNetCoordinator
 {
     public static class Extensions
     {
-        public static void AddTransactionPropagationToken(this HttpRequestMessage request)
+        public static string AddTransactionPropagationToken(this HttpRequestMessage request)
         {
+            string token=null;
             if (Transaction.Current != null)
             {
-                var token = TransactionInterop.GetTransmitterPropagationToken(Transaction.Current);
-                request.Headers.Add("TransactionToken", Convert.ToBase64String(token));
+                var tokenBytes = TransactionInterop.GetTransmitterPropagationToken(Transaction.Current);
+                token = Convert.ToBase64String(tokenBytes);
+                request.Headers.Add("TransactionToken", token);
             }
+            return token;
         }
     }
 }

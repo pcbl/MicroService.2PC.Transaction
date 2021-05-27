@@ -11,14 +11,15 @@ namespace NetFrwService.Controllers
         [ActionName("DoJob")]
         [HttpPost]
         [EnlistToDistributedTransactionActionFilter]
-        public void DoJob()
+        public void DoJob([FromBody]string preffix)
         {
+            if (preffix == "error") throw new Exception("We wanted an error!");
             using(var con = new SqlConnection(ConfigurationManager.ConnectionStrings["DB"].ConnectionString))
             {
                 con.Open();
                 using(var cmd = con.CreateCommand())
                 {
-                    cmd.CommandText = $"Insert Into LogTable(Name) values ('{Guid.NewGuid().ToString()}')";
+                    cmd.CommandText = $"Insert Into LogTable(Name) values ('{preffix}--{Guid.NewGuid()}')";
                     cmd.ExecuteNonQuery();
                 }
             }

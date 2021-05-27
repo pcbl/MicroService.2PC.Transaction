@@ -9,6 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoordinator", "DotNet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFrwService", "NetFrwService\NetFrwService.csproj", "{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D75EF7AE-2191-423A-BDEB-C1170949AA29}"
+	ProjectSection(SolutionItems) = preProject
+		SequenceDiagram.puml = SequenceDiagram.puml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Net Core", ".Net Core", "{099699D3-56BC-4B96-A01C-6336B737FBAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreService", "NetCoreService\NetCoreService.csproj", "{265F2FF3-7EF1-4B2B-933A-839140D61EB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +32,10 @@ Global
 		{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{265F2FF3-7EF1-4B2B-933A-839140D61EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265F2FF3-7EF1-4B2B-933A-839140D61EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265F2FF3-7EF1-4B2B-933A-839140D61EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265F2FF3-7EF1-4B2B-933A-839140D61EB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +43,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{921D80FB-DB93-40ED-8C19-3457E9ABFEF2} = {8B4CA55E-434B-43DC-BAF6-F18ED7A2E746}
 		{58D8F7D0-3FCB-4C3E-9E23-4D5EA5AC9C81} = {8B4CA55E-434B-43DC-BAF6-F18ED7A2E746}
+		{265F2FF3-7EF1-4B2B-933A-839140D61EB7} = {099699D3-56BC-4B96-A01C-6336B737FBAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {927A8521-18A6-44F1-941A-3226C373CE9F}

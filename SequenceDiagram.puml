@@ -1,0 +1,30 @@
+@startuml
+participant client as client
+participant msdtc as msdtc
+participant service_a as sa
+participant service_b as sb
+database    database    as db
+
+
+client->msdtc:Start Transaction
+activate msdtc
+msdtc-->client:Transaction ID
+
+client->sa:Make Call
+sa->msdtc:Get Parent Transaction
+sa->db:Insert Data(Within transaction scope)
+sa->sa:Commit child transaction
+sa->client:OK(200)
+
+client->sb:Make Call
+sb->msdtc:Get Parent Transaction
+sb->db:Insert Data(Within transaction scope)
+sb->sb:Commit child transaction
+sb->client:OK(200)
+
+
+client->msdtc:commit
+msdtc->db:commit db changes
+deactivate msdtc
+msdtc-->client:OK
+@enduml
